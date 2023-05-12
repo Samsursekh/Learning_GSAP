@@ -8,6 +8,7 @@
   padding: 0;
   height: 100vh;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 .logo{
   color: aliceblue;
@@ -28,7 +29,7 @@ nav ul{
 nav ul li{
   list-style: none;
   margin-left: 40px;
-  font-size: 12px;
+  font-size: 15px;
   font-family: sans-serif;
 }
 nav ul li a{
@@ -164,7 +165,7 @@ p{
 .CardContainer {
   max-width: 1100px;
   margin: auto;
-  overflow: auto;
+  overflow-x: hidden;
   padding: 0 2rem;
 }
 
@@ -222,15 +223,16 @@ a {
 /* scgDiv stared here */
 
 .svgDiv{
-  /* border: 1px solid blue; */
   height: 10px;
   margin: auto;
   display: flex;
   margin-top: 1rem;
   justify-content: center;
+  position: relative;
 }
 .svgDiv > svg{
-  width: 80%;
+  width: 60rem;
+  position: absolute;
   transform: rotate(-90deg);
 }
 
@@ -242,13 +244,13 @@ a {
   margin: auto;
 }
 #firstDiv{
-  border: 2px solid rgb(0, 13, 114);
   background-color: #333;
   color: #fff;
   text-align: center;
   padding: 10px;
   margin-bottom: 100px;
   font-family: 'Poppins', sans-serif;
+  opacity: 0;
 }
 
 #firstDiv > img{
@@ -256,11 +258,11 @@ a {
 }
 
 #secondDiv{
-  border: 2px solid rgb(0, 13, 114);
   background-color: #333;
   color: #fff;
   text-align: center;
   padding: 10px;
+  opacity: 0;
   margin-top: 100px;
   font-family: 'Poppins', sans-serif;
 }
@@ -269,11 +271,11 @@ a {
 }
 
 #thirdDiv{
-  border: 2px solid rgb(0, 13, 114);
   background-color: #333;
   color: #fff;
   text-align: center;
   padding: 10px;
+  opacity: 0;
   margin-bottom: 100px;
   font-family: 'Poppins', sans-serif;
 }
@@ -282,14 +284,31 @@ a {
 }
 
 #fourthDiv{
-  border: 2px solid rgb(0, 13, 114);
   background-color: #333;
   color: #fff;
   text-align: center;
   padding: 10px;
+  opacity: 0;
   margin-top: 100px;
+  margin-bottom: 50px;
+
   font-family: 'Poppins', sans-serif;
 }
 #fourthDiv > img{
   width: 100px;
+}
+
+.mask{
+  width: 0;
+}
+
+
+#footer{
+  margin-top: 200px;
+  color: #fff;
+  background-color: rgb(20, 151, 180);
+  height: 70px;
+  display: flex;
+  font-family: poppins, sans-serif;
+  justify-content: center;
 }

@@ -33,24 +33,6 @@ tl2.fromTo(".content1", {x: 100}, {
     x: 0
 })
 
-// let treeTimeLine = gsap.timeline({
-//     scrollTrigger: {
-//         trigger : ".treeDiv",
-//         markers: true,
-//         start: "20px",
-//         // end: "500px"
-//     }
-    
-// });
-
-// // treeTimeLine.to(".treeImg" ,{y: 100, opacity: 0, duration: 2})
-// treeTimeLine.to(".treeImg", {y: 50, opacity: 0})
-// .addLabel("btnin")
-
-// treeTimeLine.to(".treeImg", {y: -50, opacity: 1});
-
-
-
 const showAnim = gsap.from('.treeImg', { 
     yPercent: 10,
     opacity: 0,
@@ -65,8 +47,62 @@ const showAnim = gsap.from('.treeImg', {
     }
   });
 
+//   animation of all four divs
 
+gsap.to('#firstDiv', {
+    scrollTrigger: {
+        trigger: "#firstDiv",
+        toggleActions: "restart pause resume none",
+        // markers: true,
+        start: "100px center",
+    },
+    opacity: 1,
+    // rotation: 360,
+    duration: 2
+})
 
+gsap.to('#secondDiv', {
+    scrollTrigger: {
+        trigger: "#secondDiv",
+        toggleActions: "restart pause resume none",
+        start: "100px center",
+    },
+    opacity: 1,
+    // rotation: 360,
+    duration: 2
+})
 
+gsap.to('#thirdDiv', {
+    scrollTrigger: {
+        trigger: "#thirdDiv",
+        toggleActions: "restart pause resume none",
+        start: "100px center",
+    },
+    opacity: 1,
+    // rotation: 360,
+    duration: 2
+})
+gsap.to('#fourthDiv', {
+    scrollTrigger: {
+        trigger: "#fourthDiv",
+        toggleActions: "restart pause resume none",
+        start: "100px center",
+    },
+    opacity: 1,
+    // rotation: 360,
+    duration: 2
+})
 
+// making design for mask
+
+const mask = document.querySelector('.mask');
+gsap.to(mask, {
+    width: "120%",
+    scrollTrigger : {
+       trigger: "svg",
+       start: "100px bottom",
+       scrub: 1,
+    //    markers: true
+    }
+})
 
